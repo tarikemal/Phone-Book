@@ -1,38 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h3 {
+  padding-top: 2rem;
+}
+
 .App {
   text-align: center;
+  width: 45%;
+  border-radius: 10px;
+  background-color: black;
+  margin: 0 auto;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::-webkit-scrollbar {
+  width: 0.33rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App::-webkit-scrollbar-track {
+  background: #1e1e24;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App::-webkit-scrollbar-thumb {
+  background: #646161;
+}
+
+.header-section {
+  position: relative;
+}
+
+.header-section .header-section__info .header-section__title {
+  font-size: 2rem;
+  padding-top: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-weight: 300;
+  letter-spacing: 0.01px;
+}
+
+.header-section .header-section__info .header-section__number {
+  margin-top: 0;
+  color: #b9afaf;
+}
+
+.header-section .header-section__icons {
+  position: absolute;
+  right: 1rem;
+  margin-top: 2rem;
+}
+
+.header-section .header-section__icons > * {
+  padding: 0.3rem;
+}
+
+.header-section .header-section__icons .material-icons {
+  font-size: 1.7rem;
+}
+
+.people-section {
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.people-section .letter-section {
+  margin-top: 1.4rem;
+}
+
+.people-section .letter-section .letter-section__letter {
+  color: #b9afaf;
+  margin-left: 0.8em;
+}
+
+.letter-section__people {
+  background-color: #282828;
+  border-radius: 2.5rem;
+  font-size: 1.13rem;
+}
+
+.letter-section__people .letter-section__people--content {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.35em 1rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.letter-section__people .letter-section__people--content .letter-section__people--letter {
+  background-color: #c53929;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+
+.letter-section__people .letter-section__people--content .letter-section__people--name {
+  margin: 0;
+}
+
+.letter-section__people .letter-section__people--content .letter-section__people--phone {
+  margin: 0;
+}
+
+.letter-section__people .letter-section__people--content .letter-section__people--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.3rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.letter-section__people .letter-section__people__extra--info {
+  text-align: center;
+  color: rgba(28, 168, 61, 0.9);
+  font-size: 0.8rem;
+}
+
+.letter-section__people .letter-section__people__extra--info .extra-info__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem 1rem;
+}
+
+.letter-section__people .letter-section__people__extra--info .extra-info__icons .material-icons {
+  color: #1ca83d;
+}
+
+.letter-section__people .letter-section__people__extra--info .extra-info__icons .chat-icon {
+  color: #2b8cb9;
+}
+
+.letter-section__people .letter-section__people__extra--info .extra-info__icons .info-icon {
+  color: grey;
+}
+
+.search-section .search-section__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.7rem 1rem;
+  background-color: #282828;
+  border-radius: 30px;
+}
+
+.search-section .search-section__input input {
+  background-color: #282828;
   color: white;
+  border: none;
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.search-section .search-section__input .material-icons {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-section .search-section__input .arrow-icon {
+  display: block;
+}
+
+.search-section .latest-calls-text {
+  text-align: left;
+  color: #b9afaf;
+  margin-left: 0.8em;
+  font-size: 0.95rem;
+}
+
+.search-section .latest-calls {
+  border-radius: 2.5rem;
+  background-color: #282828;
+  font-size: 1.1rem;
+}
+
+.search-section .latest-calls .latest-calls__call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem 1rem 1.5rem;
+}
+
+.search-section .latest-calls .latest-calls__call p {
+  margin: 0;
+}
+
+.search-section .latest-calls .latest-calls__call .latest-calls__call--date {
+  font-size: 0.9rem;
+}
+
+.dot-flashing {
+  position: relative;
+  left: calc(50% + 37px);
+  bottom: 22px;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  -webkit-animation: dotFlashing 1s infinite linear alternate;
+          animation: dotFlashing 1s infinite linear alternate;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  -webkit-animation: dotFlashing 1s infinite alternate;
+          animation: dotFlashing 1s infinite alternate;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  -webkit-animation: dotFlashing 1s infinite alternate;
+          animation: dotFlashing 1s infinite alternate;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes dotFlashing {
+  0% {
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  to {
-    transform: rotate(360deg);
+  50%,
+  100% {
+    background-color: #ebe6ff;
   }
 }
+
+@keyframes dotFlashing {
+  0% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
+.call-section .call-section__calling {
+  margin-top: 2rem;
+}
+
+.call-section .call-section__name {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.call-section .call-section__phone {
+  margin-top: 0.3rem;
+}
+
+.call-section .call-section__phone .call-section__phone--number {
+  margin-left: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.call-section .call-section__letter {
+  background-color: #c94e41;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.5rem;
+  border-radius: 50%;
+}
+
+.call-section .call-section__icons {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+.call-section .call-end-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4.5rem;
+}
+
+.call-section .call-end-icon-container .call-end-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+  font-size: 2.5rem;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+/*# sourceMappingURL=App.css.map */
